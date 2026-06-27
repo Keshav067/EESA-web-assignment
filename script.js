@@ -1,6 +1,4 @@
-// ======================================================
-//                  EVENT SLIDER
-// ======================================================
+
 
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
@@ -12,7 +10,6 @@ const slider = document.querySelector(".slider");
 let currentSlide = 0;
 let autoSlide;
 
-// ================= SHOW SLIDE =================
 
 function showSlide(index) {
 
@@ -35,7 +32,7 @@ function showSlide(index) {
 
 }
 
-// ================= NEXT / PREVIOUS =================
+
 
 function nextSlide() {
 
@@ -49,7 +46,7 @@ function prevSlide() {
 
 }
 
-// ================= BUTTONS =================
+
 
 if (nextBtn && prevBtn) {
 
@@ -59,7 +56,7 @@ if (nextBtn && prevBtn) {
 
 }
 
-// ================= DOTS =================
+
 
 dots.forEach((dot, index) => {
 
@@ -73,7 +70,6 @@ dots.forEach((dot, index) => {
 
 });
 
-// ================= AUTO SLIDER =================
 
 function startAutoSlide() {
 
@@ -105,7 +101,6 @@ if (slider) {
 
 }
 
-// ================= TOUCH SWIPE =================
 
 let touchStartX = 0;
 let touchEndX = 0;
@@ -142,9 +137,7 @@ if (slider) {
 
 }
 
-// ======================================================
-//                  NAVBAR
-// ======================================================
+
 
 const navbar = document.querySelector(".navbar");
 
@@ -182,9 +175,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-// ======================================================
-//              HERO BUTTON
-// ======================================================
+
 
 const heroButton = document.querySelector(".hero-btn");
 
@@ -203,10 +194,6 @@ if (heroButton) {
     });
 
 }
-
-// ======================================================
-//              COUNCIL MODAL
-// ======================================================
 
 const modal = document.getElementById("councilModal");
 
@@ -246,10 +233,6 @@ if (modal) {
 
 }
 
-// ======================================================
-//              QUICK ACCESS HOVER
-// ======================================================
-
 document.querySelectorAll(".quick-card").forEach(card => {
 
     card.addEventListener("mouseenter", () => {
@@ -266,10 +249,6 @@ document.querySelectorAll(".quick-card").forEach(card => {
 
 });
 
-// ======================================================
-//              ACTIVE NAV LINK
-// ======================================================
-
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
 document.querySelectorAll(".nav-links a").forEach(link => {
@@ -279,10 +258,6 @@ document.querySelectorAll(".nav-links a").forEach(link => {
         link.classList.add("active");
 
 });
-
-// ======================================================
-//              SCROLL ANIMATION
-// ======================================================
 
 const observer = new IntersectionObserver(entries => {
 
@@ -306,9 +281,7 @@ document.querySelectorAll("section").forEach(section => {
 
 });
 
-// ======================================================
-//              BLOG BUTTON EFFECT
-// ======================================================
+
 
 document.querySelectorAll(".blog-btn").forEach(button => {
 
@@ -325,11 +298,6 @@ document.querySelectorAll(".blog-btn").forEach(button => {
     });
 
 });
-
-// ======================================================
-//              INITIALIZE
-// ======================================================
-
 if (slides.length > 0)
 
     showSlide(0);
